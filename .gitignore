@@ -1,0 +1,78 @@
+# ==============================================================================
+# ShadowHunters Multi-Cloud Cartography Security Graph - GitIgnore Specification
+# Ensures zero secrets, credentials, tokens, local DB files, or logs are committed.
+# ==============================================================================
+
+# 1. Environment & Secret Configuration Files
+.env
+.env.*
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+config/*.env
+!config/*.example.env
+
+# 2. Cloud Credentials, Keys & Certificates
+credentials
+config
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+*.asc
+*gcp*.json
+*aws*.json
+*service-account*.json
+*credentials*.json
+*client_secret*.json
+*.json.key
+
+# 3. Virtual Environments & Package Trees
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+
+# 4. Neo4j Local Server Database Files & System Logs
+data/
+dbms/
+neo4j-data/
+*.db
+*.id
+
+# 5. Output Dumps, Execution Logs & Temporary Files
+output/*
+!output/.gitkeep
+reports/*
+!reports/.gitkeep
+logs/
+*.log
+*.err
+_temp*
+
+# 6. Python Cache Artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 7. OS, IDE & Editor Specific Files
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.antigravity/
+.gemini/
