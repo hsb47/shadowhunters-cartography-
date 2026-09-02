@@ -9,7 +9,7 @@
 
 ---
 
-## 📐 System Architecture
+## 📐 System Architecture & Visual Pipeline
 
 ```
               EXISTING CLOUD INFRASTRUCTURE
@@ -34,6 +34,21 @@
                                       ▼
                               Security Findings
 ```
+
+---
+
+## 🖼️ Visual Demonstrations
+
+### 1. Ingestion Verification Output (`.\scripts\verify-ingestion.ps1`)
+![Ingestion Verification Output](docs/images/02_ingestion_verification.png)
+
+### 2. IAM User Privilege Node Graph (`shadow-hunter` ➔ `AdministratorAccess`)
+![IAM User Policy Graph](docs/images/04_neo4j_user_policy_graph.png)
+
+### 3. AWS IAM Service Trust Network Ring
+![AWS IAM Trust Network Ring](docs/images/05_neo4j_graph_ring.png)
+
+*See full visual documentation in [docs/visual-guide.md](docs/visual-guide.md).*
 
 ---
 
@@ -73,6 +88,14 @@ shadowhunters-cartography/
 │   ├── gcp.example.env                # GCP Project ID & ADC key template
 │   └── neo4j.example.env              # Neo4j URI & Password env template
 ├── docs/                              # Detailed Technical Documentation
+│   ├── images/                        # Organised Screenshot Assets
+│   │   ├── 01_ingestion_execution.png
+│   │   ├── 02_ingestion_verification.png
+│   │   ├── 03_neo4j_table_analysis.png
+│   │   ├── 04_neo4j_user_policy_graph.png
+│   │   └── 05_neo4j_graph_ring.png
+│   ├── visual-guide.md                # Interactive Visual Demonstration Guide
+│   ├── cartography-alternatives-research.md # Comparative Tool Evaluation
 │   ├── architecture.md                # Component & data flow diagrams
 │   ├── prerequisites.md               # Tooling & system requirements
 │   ├── aws.md                         # AWS read-only permissions & setup
